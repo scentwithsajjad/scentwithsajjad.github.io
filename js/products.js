@@ -14,5 +14,5 @@ const PRODUCTS = [
 {id:'only-you',name:'Only You Intensely',brand:'Oriflame',image:'assets/only-you.webp',reviewed:false,decant:true,tag:'Floral · Warm',notes:['Neroli','Jasmine','Vanilla'],reviewUrl:''},
 {id:'vert-malakite',name:'Vert Malakite',brand:'Oriflame',image:'assets/vert-malakite.webp',reviewed:false,decant:true,tag:'Green · Floral',notes:['Bergamot','Green Notes','Jasmine'],reviewUrl:''},
 {id:'22-north',name:'22° North',brand:'Embarouce',image:'assets/22-north.webp',reviewed:true,decant:true,tag:'Aromatic · Woody',notes:['Citrus','Bergamot','Woody'],reviewUrl:''},
-{id:'acqua-intense',name:'Acqua Intense for Men',brand:'Giorgio Armani',image:'assets/acqua-intense.webp',reviewed:true,decant:true,tag:'Marine · Woody',notes:['Marine','Bergamot','Amber'],reviewUrl:''}
+{id: "acqua-intense",name: "Acqua Intense",brand: "Delongpré",image: "assets/acqua-intense.webp",reviewed: true,decant: true,tag: "Woody Aquatic",notes: ["Bergamot","Lime","Marine Notes","Lavender","Rosemary","Mint","Water Lily","Sandalwood","Cedarwood","White Musk","Amber","Patchouli"],reviewUrl: ""}
 ];
