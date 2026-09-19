@@ -5,7 +5,7 @@ const PRODUCTS = [
 {id:'rose-noir',name:'Rose Noir',brand:'Ahmed Al Maghribi',gender:"Women",image:'assets/rose-noir.webp',reviewed:false,decant:true,tag:'Floral · Oriental',notes:['Rose','Floral','Woody'],reviewUrl:''},
 {id:'marin',name:'Marin',brand:'Ahmed Al Maghribi',gender:"Women",image:'assets/marin.webp',reviewed:false,decant:true,tag:'Fresh · Marine',notes:['Citrus','Marine','Woody'],reviewUrl:''},
 {id:'oud-roses',name:'Oud & Roses',brand:'Ahmed Al Maghribi',gender:"Unisex",image:'assets/oud-roses.webp',reviewed:true,decant:true,tag:'Oud · Rose',notes:['Rose','Oud','Musk'],reviewUrl:''},
-{id:'dark-lavender',name:'Dark Lavender',brand:'Ibraqat Al Oud',gender:"Unisex",image:'assets/dark-lavender.webp',reviewed:false,decant:true,tag:'Lavender · Oud',notes:['Lavender','Spices','Oud'],reviewUrl:''},
+{id:'dark-lavender',name:'Dark Lavender',brand:'IBRAHEEM AL.QURASHI',gender:"Unisex",image:'assets/dark-lavender.webp',reviewed:false,decant:true,tag:'Lavender · Oud',notes:['Lavender','Spices','Oud'],reviewUrl:''},
 {id:'network',name:'Network',brand:'Lomani Paris',gender:"Men",image:'assets/network.webp',reviewed:false,decant:true,tag:'Fresh · Aromatic',notes:['Citrus','Lavender','Musk'],reviewUrl:''},
 {id:'ck-in2u',name:'CK IN2U for Him',brand:'Calvin Klein',gender:"Men",image:'assets/ck-in2u.webp',reviewed:false,decant:true,tag:'Fresh · Casual',notes:['Citrus','Cacao','Vetiver'],reviewUrl:''},
 {id:'sauvage',name:'Sauvage Eau de Parfum',brand:'Dior',gender:"Men",image:'assets/sauvage.webp',reviewed:false,decant:true,tag:'Woody · Aromatic',notes:['Bergamot','Lavender','Ambroxan'],reviewUrl:''},
