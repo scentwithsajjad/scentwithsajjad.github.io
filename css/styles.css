@@ -12,3 +12,9 @@
 .about-logo{width:72px; height:72px; object-fit:contain; display:block; margin:0 auto 18px;}
 .floating-wa .wa-icon{width:20px;height:20px;background:#25D366;color:#fff !important;border-radius:50%;font-size:13px;line-height:20px;display:inline-flex;align-items:center;justify-content:center;flex:0 0 20px;margin-right:6px;}
 .size-buttons a{display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px;} .size-price{ font-size:12px; font-weight:600; color:var(--gold);}
+.size-buttons a{display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px;} .size-buttons .size-price{display:block; font-size:11px;line-height:1;font-weight:600; color:var(--gold); margin-top:2px;}
+
+/* Keep the price readable when hovering */
+.size-buttons a:hover .size-price{
+  color:#111;
+}
