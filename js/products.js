@@ -1,7 +1,7 @@
 // EDIT THIS FILE to add/change products later. Each product is independent.
 // reviewed: true/false | decant: true/false | reviewUrl: add your Instagram reel URL when ready.
 const PRODUCTS = [
-{id:'supremacy',name:"Supremacy Collector's Edition",brand:'Afnan',gender:"Men",image:'assets/supremacy.webp',reviewed:true,decant:true,tag:'Fruity · Woody · Amber', price:{"5ML":380, "8ML":505, "10ML":595}, notes:['Woody','Aromatic','Fresh'],reviewUrl:''},
+{id:'supremacy',name:"Supremacy Collector's Edition",brand:'Afnan',gender:"Men",image:'assets/supremacy.webp',reviewed:true,decant:true,tag:'Fruity · Woody · Amber', prices:{"5ML":380, "8ML":505, "10ML":595}, notes:['Woody','Aromatic','Fresh'],reviewUrl:''},
 {id:'rose-noir',name:'Rose Noir',brand:'Ahmed Al Maghribi',gender:"Women",image:'assets/rose-noir.webp',reviewed:false,decant:true,tag:'Floral · Oriental',notes:['Rose','Floral','Woody'],reviewUrl:''},
 {id:'marin',name:'Marin',brand:'Ahmed Al Maghribi',gender:"Women",image:'assets/marin.webp',reviewed:false,decant:true,tag:'Fresh · Marine',notes:['Citrus','Marine','Woody'],reviewUrl:''},
 {id:'oud-roses',name:'Oud & Roses',brand:'Ahmed Al Maghribi',gender:"Unisex",image:'assets/oud-roses.webp',reviewed:true,decant:true,tag:'Oud · Rose',notes:['Rose','Oud','Musk'],reviewUrl:''},
