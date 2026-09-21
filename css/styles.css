@@ -22,3 +22,8 @@
 /* Align product card buttons */
 .product-card{display:flex;flex-direction:column;} .product-card .card-actions{margin-top:auto !important;width:100% !important;display:block !important;} .product-card .card-actions .view{width:100% !important;min-width:100% !important;display:block !important;box-sizing:border-box;background:var(--gold) !important;color:#090806 !important;
   border:1px solid var(--gold) !important;text-align:center;font-weight:600;}
+
+.product-card{display:flex !important; flex-direction:column !important;}
+.product-card .product-info{display:flex !important;flex-direction:column !important;flex:1 !important;}
+.product-card .card-actions{margin-top:auto !important;width:100% !important;display:block !important;}
+.product-card .card-actions .view{width:100% !important;min-width:100% !important;box-sizing:border-box !important;background:var(--gold) !important;color:#090806 !important;border:1px solid var(--gold) !important;text-align:center !important;font-weight:600 !important;}
