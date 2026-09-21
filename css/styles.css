@@ -19,3 +19,4 @@
   color:#111;
 }
 .shipping-note{margin:12px 0 0; color:#888; font-size:10px; line-height:1.5; letter-spacing:.2px; }
+.card-actions{display:block;width:100%;} .card-actions .view{width:100%;background:var(--gold);color:#090806;border:1px solid var(--gold);font-weight:600;cursor:pointer;text-align:center;} .card-actions .view:hover{background:#e5bd68;color:#090806;}
