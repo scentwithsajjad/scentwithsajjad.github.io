@@ -104,3 +104,22 @@
   font-weight:700;
   margin-left:4px;
 }
+
+/* Premium hover effect for size buttons */
+.size-buttons .btn-gold{
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.size-buttons .btn-gold:hover{
+  transform: scale(1.04);
+  box-shadow: 0 0 0 2px rgba(212,175,55,.35), 0 8px 20px rgba(212,175,55,.22);
+  background-color: #e2bb68 !important;
+  color: #090806 !important;
+}
+
+.size-buttons .btn-gold:hover .size-price{
+  color: #090806 !important;
+}
