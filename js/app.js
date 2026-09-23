@@ -1,7 +1,7 @@
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const waNumber='919739953849';
 const instagramUrl='https://www.instagram.com/scentwithsajjad/';
-const orderUrl=(p,size='5ML')=>`https://wa.me/${waNumber}?text=${encodeURIComponent(`Hi @scentwithsajjad, I'd like to order ${p.name} (${size}) by ${p.brand}. Please help me place my order.`)}`;
+const orderUrl=(p,size='5ML')=>'https://wa.me/${waNumber}?text=${encodeURIComponent(`Hi @scentwithsajjad, I'd like to order ${p.name} (${size}) by ${p.brand}. Please help me place my order.')}';
 function card(p){return `<article class="product-card" data-name="${(p.name+' '+p.brand).toLowerCase()}" data-reviewed="${p.reviewed}" data-decant="${p.decant}">
 <div class="product-img"><img src="${p.image}" alt="${p.brand} ${p.name} with decants" loading="lazy"><span class="status">${p.reviewed?'REVIEWED':'COLLECTION'}</span></div>
 <div class="product-info"><p class="brand-name">${p.brand}</p><h3>${p.name}</h3><p class="tag">${p.tag}</p><div class="chips">${p.notes.map(n=>`<span>${n}</span>`).join('')}</div>
@@ -74,8 +74,8 @@ function openModal(p){
 $('#search').oninput=e=>{const f=$('.filters button.active').dataset.filter;render(f,e.target.value)};
 $$('.filters button').forEach(b=>b.onclick=()=>{$$('.filters button').forEach(x=>x.classList.remove('active'));b.classList.add('active');render(b.dataset.filter,$('#search').value)});
 function reviews(){const arr=PRODUCTS.filter(p=>p.reviewed);$('#reviewGrid').innerHTML=arr.length?arr.map(p=>`<article class="review-card"><img src="${p.image}" alt="${p.name}" loading="lazy">
-  <div><p class="brand-name">${p.brand}</p><h3>${p.name}</h3><p>Reviewed on Scent With Sajjad.</p>${p.reviewUrl?`<a target="_blank" href="${p.reviewUrl}">Watch Reel ↗</a>`:'<span class="muted">
-  Review link coming soon</span>'}</div></article>`).join(''):'<p class="empty">Reviews will appear here as Reels are published.</p>'}
+  <div><p class="brand-name">${p.brand}</p><h3>${p.name}</h3><p>Reviewed on Scent With Sajjad.</p>${p.reviewUrl?`<a target="_blank" href="${p.reviewUrl}">Watch Reel ↗</a>
+  ':'<span class="muted"> Review link coming soon</span>'}</div></article>`).join(''):'<p class="empty">Reviews will appear here as Reels are published.</p>'}
   $('.menu-btn').onclick=()=>$('.nav').classList.toggle('open');$$('.nav a').forEach(a=>a.onclick=()=>$('.nav').classList.remove('open'));
   $('.modal-close').onclick=()=>$('#modal').classList.remove('show');$('.modal-backdrop').onclick=()=>$('#modal').classList.remove('show');
   document.addEventListener('keydown',e=>e.key==='Escape'&&$('#modal').classList.remove('show'));
