@@ -15,7 +15,7 @@ function openModal(p){$('#modalContent').innerHTML=`<div class="modal-grid"><div
   <span>${p.decant?'✓ Decants available':'Not currently listed for decant'}</span></div><h4>Fragrance character</h4><div class="chips big">${p.notes.map(n=>`<span>${n}</span>`).join('')}</div>
   <h4>Choose a size</h4><div class="size-buttons">${['5ML','8ML','10ML'].map(function(s){const price = p.prices && p.prices[s] != null ? p.prices[s] : '';return '<a target="_blank" 
   rel="noopener" href="' + orderUrl(p,s) + '">' + s + (price !== '' ? '<span class="size-price">₹' + price + '</span>' : '') + '</a>';}).join('')}</div>
-  <!-- ${p.reviewUrl?`<a class="btn btn-gold full" target="_blank" href="${p.reviewUrl}">Watch Review ↗</a>`:'<p class="muted">Review link will be added when the Instagram Reel is published.</p>'}</div> -->
+   ${p.reviewUrl?`<a class="btn btn-gold full" target="_blank" href="${p.reviewUrl}">Watch Review ↗</a>`:'<p class="muted">Review link will be added when the Instagram Reel is published.</p>'}</div> 
     <p class="payment-note">Payment & order confirmation will be completed via WhatsApp.</p>
     <p class="shipping-note">Note: Shipping charges are borne by the customer and are additional to the product price.</p>
     ${p.reviewUrl ? `<a class="btn btn-gold full" target="_blank" href="${p.reviewUrl}">Watch Review</a>` : ``}</div>
