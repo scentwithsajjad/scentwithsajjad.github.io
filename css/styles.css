@@ -92,3 +92,15 @@
   line-height:1.5;
   letter-spacing:.2px;
 }
+
+/* Size buttons - premium contrast */
+.size-buttons .btn-gold{
+  color:#090806 !important;
+  font-weight:600;
+}
+
+.size-buttons .btn-gold .size-price{
+  color:#090806 !important;
+  font-weight:700;
+  margin-left:4px;
+}
