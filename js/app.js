@@ -1,7 +1,7 @@
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const waNumber='919739953849';
 const instagramUrl='https://www.instagram.com/scentwithsajjad/';
-const orderUrl=(p,size='5ML')=>waNumber?`https://wa.me/${waNumber}?text=${encodeURIComponent(`Hi @scentwithsajjad, I'd like to order ${p.name} (${size}) by ${p.brand}. Please help me place my order.`)}`:`https://wa.me/?text=${encodeURIComponent(`Hi Sajjad, I'd like ${p.name} (${size}) by ${p.brand}. Please share availability and price.`)}`;
+const orderUrl=(p,size='5ML')=>waNumber?`https://wa.me/${waNumber}?text=${encodeURIComponent(`Hi @scentwithsajjad, I would like to order ${p.name} (${size}) by ${p.brand}. Please help me place my order.`)}`:`https://wa.me/?text=${encodeURIComponent(`Hi Sajjad, I'd like ${p.name} (${size}) by ${p.brand}. Please share availability and price.`)}`;
 function card(p){return `<article class="product-card" data-name="${(p.name+' '+p.brand).toLowerCase()}" data-reviewed="${p.reviewed}" data-decant="${p.decant}">
 <div class="product-img"><img src="${p.image}" alt="${p.brand} ${p.name} with decants" loading="lazy"><span class="status">${p.reviewed?'REVIEWED':'COLLECTION'}</span></div>
 <div class="product-info"><p class="brand-name">${p.brand}</p><h3>${p.name}</h3><p class="tag">${p.tag}</p><div class="chips">${p.notes.map(n=>`<span>${n}</span>`).join('')}</div>
