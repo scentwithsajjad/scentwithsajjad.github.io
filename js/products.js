@@ -14,7 +14,7 @@ const PRODUCTS = [
 {id:'only-you',name:'Only You Intensely',brand:'Oriflame',gender:"Men",image:'assets/only-you.webp',reviewed:false,decant:true,tag:'Floral · Warm',notes:['Neroli','Jasmine','Vanilla'],reviewUrl:''},
 {id:'vert-malakite',name:'Vert Malakite',brand:'Oriflame',gender:"Men",image:'assets/vert-malakite.webp',reviewed:false,decant:true,tag:'Green · Floral',notes:['Bergamot','Green Notes','Jasmine'],reviewUrl:''},
 {id:'22-north',name:'22° North',brand:'Embarouce',gender:"Men",image:'assets/22-north.webp',reviewed:false,decant:true,tag:'Aromatic · Woody',prices:{"5ML":295, "8ML":395, "10ML":450}, notes:['Citrus','Bergamot','Woody'],reviewUrl:''},
-{id: "acqua-intense",name: "Acqua Intense",brand: "Delongpré",gender:"Men",image: "assets/acqua-intense.webp",reviewed: false,decant: true,tag: "Woody Aquatic",notes: ["Bergamot","Marine Notes","Cedarwood"],reviewUrl: ""}
+{id: "acqua-intense",name: "Acqua Intense",brand: "Delongpré",gender:"Men",image: "assets/acqua-intense.webp",reviewed: false,decant: true,tag: "Woody Aquatic",notes: ["Bergamot","Marine Notes","Cedarwood"],reviewUrl: ""},
 {id: "ajmal-silver-shade",name: "Silver Shade",brand: "Ajmal",gender: "unisex",image: "assets/ajmal-silver-shade.webp",reviewed: false,decant: true,tag: "Fresh · Fruity",notes: [],prices: {
       "5ML": 0,"8ML": 0,"10ML": 0},reviewUrl: ""},
 {id: "ajmal-wave",name: "Wave",brand: "Ajmal",gender: "men",image: "assets/ajmal-wave.webp",reviewed: false,decant: true,tag: "Aquatic · Fresh",notes: [],prices: {"5ML": 0,"8ML": 0,"10ML": 0
