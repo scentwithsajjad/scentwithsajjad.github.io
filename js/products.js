@@ -31,5 +31,5 @@ const PRODUCTS = [
 {id: "rasasi-hawas-for-him",name: "Hawas for Him",brand: "Rasasi",gender: "men",image: "assets/rasasi-hawas-for-him.webp",reviewed: false,decant: true,tag: "Aquatic · Fruity",notes: ['Apple','Bergamot','Cinnamon','Plum','Ambergris'],prices: {"5ML": 355,"8ML": 425,"10ML": 550},reviewUrl: ""},
 {id: "maahir-legacy-lattafa",name: "Maahir Legacy",brand: "Lattafa",gender: "men",image: "assets/maahir-legacy-lattafa.webp",reviewed: false,decant: false,tag: "Fresh · Aromatic",notes: [],prices: {"5ML": 0,"8ML": 0,"10ML": 0},reviewUrl: ""},
 {id: "rare-reef",name: "Rare Reef",brand: "Afnan",gender: "unisex",image: "assets/rare-reef.webp",reviewed: false,decant: true,tag: "Fresh · Fruity · Woody",notes: ['Black Currant','Grapefruit','Apricot','Fig','Dates','Amberwood'],prices: {"5ML": 325,"8ML": 425,"10ML": 499},reviewUrl: ""},
-{id: "vulcan-feu",name: "Vulcan Feu",brand: "French Avenue",gender: "unisex",image: "assets/vulcan-feu.webp",reviewed: false,decant: false,tag: "Woody · Oriental",notes: [],prices: {"5ML": ,"8ML": 0,"10ML": 0},reviewUrl: ""}
+{id: "vulcan-feu",name: "Vulcan Feu",brand: "French Avenue",gender: "unisex",image: "assets/vulcan-feu.webp",reviewed: false,decant: false,tag: "Woody · Oriental",notes: [],prices: {"5ML": 0,"8ML": 0,"10ML": 0},reviewUrl: ""}
 ];
