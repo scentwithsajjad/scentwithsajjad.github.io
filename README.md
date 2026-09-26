@@ -6,7 +6,7 @@ A responsive, static fragrance website for **Scent With Sajjad | Fragrance Talk 
 - Premium black / gold fragrance aesthetic
 - Responsive desktop, tablet and mobile layout
 - Home / Collection / Decants / Reviews / Guide / About / FAQ
-- 14 fragrance products with the generated bottle + decant images
+- 31 fragrance products with the generated bottle + decant images
 - Search and filters
 - Product detail pop-up
 - Separate **Collection**, **Reviewed**, and **Available as Decant** statuses
