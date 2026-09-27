@@ -87,8 +87,61 @@ function openModal(p){
                                                                                                    
 $('#search').oninput=e=>{const f=$('.filters button.active').dataset.filter;render(f,e.target.value)};
 $$('.filters button').forEach(b=>b.onclick=()=>{$$('.filters button').forEach(x=>x.classList.remove('active'));b.classList.add('active');render(b.dataset.filter,$('#search').value)});
-function reviews(){const arr=PRODUCTS.filter(p=>p.reviewed);$('#reviewGrid').innerHTML=arr.length?arr.map(p=>'<article class="review-card"><img src="${p.image}" alt="${p.name}" loading="lazy"><div><p class="brand-name">${p.brand}</p>
-<h3>${p.name}</h3><p>Reviewed on Scent With Sajjad.</p>${p.reviewUrl?'<a target="_blank" href="${p.reviewUrl}">Watch Reel</a>':'<span class="muted">Review link coming soon</span>'}}</div></article>').join(''):'<p class="empty">
+
+function reviews(){
+  const a = PRODUCTS.filter(function(p){
+    return p.reviewed === true;
+  });
+
+  $('#reviewGrid').innerHTML = a.map(function(p){
+
+    let reviewLink = '';
+
+    if(p.reviewUrl){
+      reviewLink =
+        '<a target="_blank" rel="noopener" href="' +
+        p.reviewUrl +
+        '">Watch Reel ↗</a>';
+    }else{
+      reviewLink =
+        '<span class="muted">Review link coming soon</span>';
+    }
+
+    return (
+      '<article class="review-card">' +
+
+        '<img src="' +
+        p.image +
+        '" alt="' +
+        p.name +
+        '" loading="lazy">' +
+
+        '<div>' +
+
+          '<p class="brand-name">' +
+          p.brand +
+          '</p>' +
+
+          '<h3>' +
+          p.name +
+          '</h3>' +
+
+          '<p>Reviewed on Scent With Sajjad.</p>' +
+
+          reviewLink +
+
+        '</div>' +
+
+      '</article>'
+    );
+
+  }).join('') ||
+
+  '<p class="empty">' +
+  'Reviews will appear here as Reels are published.' +
+  '</p>';
+}
+</div></article>').join(''):'<p class="empty">
   Reviews will appear here as Reels are published.</p>'} {'<p class="shipping-note">Note:Shipping charges are borne by the customer and are additional to he product price.</p>'}
 $('.menu-btn').onclick=()=>$('.nav').classList.toggle('open');$$('.nav a').forEach(a=>a.onclick=()=>$('.nav').classList.remove('open'));
 $('.modal-close').onclick=()=>$('#modal').classList.remove('show');$('.modal-backdrop').onclick=()=>$('#modal').classList.remove('show');document.addEventListener('keydown',e=>e.key==='Escape'&&$('#modal').classList.remove('show'));
