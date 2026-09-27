@@ -21,14 +21,70 @@ $('#productGrid').innerHTML=arr.map(card).join('')||'<div class="empty">No fragr
 
 //function openModal(p){$('#modalContent').innerHTML=`<div class="modal-grid"><div class="modal-img"><img src="${p.image}" alt="${p.name}"></div><div class="modal-copy"><p class="eyebrow">${p.brand}</p><h2>${p.name}</h2><div class="tag">${p.tag}</div><div class="modal-status"><span>${p.reviewed ? 'REVIEWED' : 'COLLECTION'}</span></div><div class="chips big">${p.notes.map(function(n){return '<span>'+n+'</span>';}).join('')}</div><h4>Choose a size</h4><div class="size-buttons">${['5ML','8ML','10ML'].map(function(s){const price=p.prices && p.prices[s]!=null ? p.prices[s] : ''; return '<a class="btn btn-gold full" target="_blank" rel="noopener" href="'+orderUrl(p,s)+'">'+s+' <span class="size-price">₹'+price+'</span></a>';}).join('')}</div><p class="payment-note">Payment &amp; order confirmation will be completed via WhatsApp.</p><p class="shipping-note">Note: Shipping charges are borne by the customer and are additional to the product price.</p>${p.reviewUrl ? '<a class="btn btn-gold full" target="_blank" rel="noopener" href="'+p.reviewUrl+'">Watch Review</a>' : ''}</div></div>`;
 
-function openModal(p){$('#modalContent').innerHTML=`<div class="modal-grid"><div class="modal-img"><img src="${p.image}" alt="${p.name}"></div><div class="modal-copy"><p class="eyebrow">${p.brand}</p><h2>${p.name}</h2><div class="tag">
-  ${p.tag}</div><div class="modal-status"><span>${p.reviewed ? 'REVIEWED' : 'COLLECTION'}</span></div><div class="chips big">${p.notes.map(function(n){return '<span>'+n+'</span>';}).join('')}</div> ${p.decant ? `<div class="decant-status">
-  DECANT AVAILABLE</div><h4>Choose a size</h4><div class="size-buttons">${['5ML','8ML','10ML'].map(function(s){const price=p.prices && p.prices[s]!=null ? p.prices[s] : '';return '<a class="btn btn-gold full" target="_blank" rel="noopener" 
-  href="'+orderUrl(p,s)+'">'+s+' <span class="size-price">₹'+price+'</span></a>';}).join('')}</div><p class="payment-note">Payment &amp; order confirmation will be completed via WhatsApp.</p><p class="shipping-note">
-  Note: Shipping charges are borne by the customer and are additional to the product price.</p> ` : ` <div class="collection-message"><div class="decant-status">COLLECTION ONLY</div><p>This fragrance is currently part of the collection 
-    and is not available as a decant.</p></div>`}${p.reviewUrl ? '<a class="btn btn-gold full" target="_blank" rel="noopener" href="'+p.reviewUrl+'">Watch Review</a>' : ''}</div></div>`;
-$('#modal').classList.add('show');
-$('#modal').setAttribute('aria-hidden','false');}
+function openModal(p){
+  let decantSection = '';
+
+  if(p.decant){
+    decantSection =
+      '<div class="decant-status">DECANT AVAILABLE</div>' +
+      '<h4>Choose a size</h4>' +
+      '<div class="size-buttons">' +
+      ['5ML','8ML','10ML'].map(function(s){
+        const price = p.prices && p.prices[s] != null ? p.prices[s] : '';
+
+        return '<a class="btn btn-gold full" target="_blank" rel="noopener" href="' +
+          orderUrl(p,s) +
+          '">' +
+          s +
+          ' <span class="size-price">₹' +
+          price +
+          '</span></a>';
+      }).join('') +
+      '</div>' +
+      '<p class="payment-note">Payment &amp; order confirmation will be completed via WhatsApp.</p>' +
+      '<p class="shipping-note">Note: Shipping charges are borne by the customer and are additional to the product price.</p>';
+  }else{
+    decantSection =
+      '<div class="collection-message">' +
+      '<div class="decant-status">COLLECTION ONLY</div>' +
+      '<p>This fragrance is currently part of the collection and is not available as a decant.</p>' +
+      '</div>';
+  }
+
+  $('#modalContent').innerHTML =
+    '<div class="modal-grid">' +
+      '<div class="modal-img">' +
+        '<img src="' + p.image + '" alt="' + p.name + '">' +
+      '</div>' +
+
+      '<div class="modal-copy">' +
+        '<p class="eyebrow">' + p.brand + '</p>' +
+        '<h2>' + p.name + '</h2>' +
+        '<div class="tag">' + p.tag + '</div>' +
+
+        '<div class="modal-status">' +
+          '<span>' + (p.reviewed ? 'REVIEWED' : 'COLLECTION') + '</span>' +
+        '</div>' +
+
+        '<div class="chips big">' +
+          p.notes.map(function(n){
+            return '<span>' + n + '</span>';
+          }).join('') +
+        '</div>' +
+
+        decantSection +
+
+        (p.reviewUrl
+          ? '<a class="btn btn-gold full" target="_blank" rel="noopener" href="' + p.reviewUrl + '">Watch Review</a>'
+          : '') +
+
+      '</div>' +
+    '</div>';
+
+  $('#modal').classList.add('show');
+  $('#modal').setAttribute('aria-hidden','false');
+}
+                                                                                                   
 $('#search').oninput=e=>{const f=$('.filters button.active').dataset.filter;render(f,e.target.value)};
 $$('.filters button').forEach(b=>b.onclick=()=>{$$('.filters button').forEach(x=>x.classList.remove('active'));b.classList.add('active');render(b.dataset.filter,$('#search').value)});
 function reviews(){const arr=PRODUCTS.filter(p=>p.reviewed);$('#reviewGrid').innerHTML=arr.length?arr.map(p=>`<article class="review-card"><img src="${p.image}" alt="${p.name}" loading="lazy"><div><p class="brand-name">${p.brand}</p>
