@@ -141,8 +141,7 @@ function reviews(){
   'Reviews will appear here as Reels are published.' +
   '</p>';
 }
-</div></article>').join(''):'<p class="empty">
-  Reviews will appear here as Reels are published.</p>'} {'<p class="shipping-note">Note:Shipping charges are borne by the customer and are additional to he product price.</p>'}
+
 $('.menu-btn').onclick=()=>$('.nav').classList.toggle('open');$$('.nav a').forEach(a=>a.onclick=()=>$('.nav').classList.remove('open'));
 $('.modal-close').onclick=()=>$('#modal').classList.remove('show');$('.modal-backdrop').onclick=()=>$('#modal').classList.remove('show');document.addEventListener('keydown',e=>e.key==='Escape'&&$('#modal').classList.remove('show'));
 $('#waFloat').href=`https://wa.me/${waNumber}`;$('#year').textContent=new Date().getFullYear();render();reviews();
